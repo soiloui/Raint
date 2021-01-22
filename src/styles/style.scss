@@ -10,6 +10,8 @@ $color-two: #ff9;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   padding: 2em 4em;
 
   color: $color-one;
@@ -73,11 +75,20 @@ nav {
   }
 }
 
-.text {
-  position: absolute;
-  top: 50%;
+body {
+  height: 100vh;
+}
 
-  transform: translateY(-50%);
+main {
+  flex: 1;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
   z-index: 5;
 
   h2 {
@@ -128,12 +139,7 @@ video {
   z-index: -1;
 }
 
-footer {
-  position: absolute;
-  bottom: 2em;
-  left: 50%;
-  transform: translateX(-50%);
-}
+
 
 .social {
   ul {
